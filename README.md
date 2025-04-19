@@ -31,6 +31,6 @@ group1_assignment3_project_weblook/
 
 ## Team Members
 - Bhargav Rishi Medisetti
-- Chi Phuong Diep
 - Safiya Joseph
+- Chi Phuong Diep
 - Sudhamshu Karthik Reddy Nagaiaghari
