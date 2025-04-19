@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization - NYC Motor Vehicle Collisions Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>NYC Motor Vehicle Collisions Dashboard</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="visualization.html" class="active">Data Visualization</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="charts">
+            <h2>Data Visualization</h2>
+            <div class="chart-container">
+                <div class="chart-box">
+                    <h3>Collisions by Borough</h3>
+                    <canvas id="boroughChart"></canvas>
+                </div>
+                
+                <div class="chart-box">
+                    <h3>Contributing Factors</h3>
+                    <canvas id="factorsChart"></canvas>
+                </div>
+                
+                <div class="chart-box wide">
+                    <h3>Injuries Over Time</h3>
+                    <canvas id="timelineChart"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 NYC Motor Vehicle Collisions Dashboard</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html>
