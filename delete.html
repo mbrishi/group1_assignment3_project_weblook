@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Record - NYC Motor Vehicle Collisions Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>NYC Motor Vehicle Collisions Dashboard</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="visualization.html">Data Visualization</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="crud-page">
+            <h2>Delete Collision Record</h2>
+            <div class="crud-buttons">
+                <button onclick="location.href='create.html'">Report a Collision</button>
+                <button onclick="location.href='read.html'">View a Collision Record</button>
+                <button onclick="location.href='update.html'">Update a Collision Record</button>
+                <button onclick="location.href='delete.html'">Delete a Collision Record</button>
+            </div>
+            <div class="form-container">
+                <p>Are you sure you want to delete this collision record?</p>
+                <div class="button-group">
+                    <button class="primary-button" onclick="confirmDelete()">Yes, Delete</button>
+                    <button class="secondary-button" onclick="window.location.href='read.html'">Cancel</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="crud-explanation">
+        <h3>How "Delete" Works</h3>
+        <p>
+            The <strong>Delete</strong> operation enables users to remove a collision record from the database. 
+            Users confirm the deletion, and the record is permanently removed. 
+            In the final project, this action will call the backend API to delete the record and update all relevant data displays and charts.
+        </p>
+    </section>
+
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 NYC Motor Vehicle Collisions Dashboard</p>
+        </div>
+    </footer>
+    <script>
+        function confirmDelete() {
+            alert('Record deleted successfully! (Simulation)');
+            window.location.href = 'read.html';
+        }
+    </script>
+</body>
+</html>

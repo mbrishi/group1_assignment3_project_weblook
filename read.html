@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Records - NYC Motor Vehicle Collisions Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>NYC Motor Vehicle Collisions Dashboard</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="visualization.html">Data Visualization</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="crud-page">
+            <h2>View Collision Records</h2>
+            
+            <div class="crud-buttons">
+                <button onclick="location.href='create.html'">Report a Collision</button>
+                <button onclick="location.href='read.html'">View a Collision Record</button>
+                <button onclick="location.href='update.html'">Update a Collision Record</button>
+                <button onclick="location.href='delete.html'">Delete a Collision Record</button>
+            </div>
+            
+            <div class="table-container">
+                <div class="filter-group">
+                    <input type="text" id="searchInput" placeholder="Search records...">
+                    <select id="boroughFilter">
+                        <option value="">All Boroughs</option>
+                        <option value="MANHATTAN">Manhattan</option>
+                        <option value="BROOKLYN">Brooklyn</option>
+                        <option value="QUEENS">Queens</option>
+                        <option value="BRONX">Bronx</option>
+                        <option value="STATEN ISLAND">Staten Island</option>
+                    </select>
+                </div>
+                
+                <table id="collisionsTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Borough</th>
+                            <th>Street</th>
+                            <th>Injuries</th>
+                            <th>Fatalities</th>
+                            <th>Contributing Factor</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be loaded via JavaScript -->
+                    </tbody>
+                </table>
+                
+                <div class="pagination">
+                    <button id="prevPage">Previous</button>
+                    <span id="pageInfo">Page 1 of 1</span>
+                    <button id="nextPage">Next</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="crud-explanation">
+        <h3>How "Read" Works</h3>
+        <p>
+            The <strong>Read</strong> operation displays a list of existing collision records. 
+            Users can browse, search, and filter through the dummy data. 
+            In the final project, this page will fetch real data from the backend API and always display the most up-to-date records.
+        </p>
+    </section>
+    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 NYC Motor Vehicle Collisions Dashboard</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

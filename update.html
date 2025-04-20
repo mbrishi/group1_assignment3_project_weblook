@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Record - NYC Motor Vehicle Collisions Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>NYC Motor Vehicle Collisions Dashboard</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="visualization.html">Data Visualization</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="crud-page">
+            <h2>Update Collision Record</h2>
+            <div class="crud-buttons">
+                <button onclick="location.href='create.html'">Report a Collision</button>
+                <button onclick="location.href='read.html'">View a Collision Record</button>
+                <button onclick="location.href='update.html'">Update a Collision Record</button>
+                <button onclick="location.href='delete.html'">Delete a Collision Record</button>
+            </div>
+            <div class="form-container">
+                <form id="updateForm">
+                    <div class="form-group">
+                        <label for="crashDate">Crash Date:</label>
+                        <input type="date" id="crashDate" value="2025-04-15" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="crashTime">Crash Time:</label>
+                        <input type="time" id="crashTime" value="08:30" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="borough">Borough:</label>
+                        <select id="borough" required>
+                            <option value="MANHATTAN" selected>Manhattan</option>
+                            <option value="BROOKLYN">Brooklyn</option>
+                            <option value="QUEENS">Queens</option>
+                            <option value="BRONX">Bronx</option>
+                            <option value="STATEN ISLAND">Staten Island</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="streetName">Street Name:</label>
+                        <input type="text" id="streetName" value="BROADWAY" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="personsInjured">Number of Persons Injured:</label>
+                        <input type="number" id="personsInjured" min="0" value="2" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="personsKilled">Number of Persons Killed:</label>
+                        <input type="number" id="personsKilled" min="0" value="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contributingFactor">Contributing Factor:</label>
+                        <select id="contributingFactor" required>
+                            <option value="Driver Inattention/Distraction" selected>Driver Inattention/Distraction</option>
+                            <option value="Failure to Yield Right-of-Way">Failure to Yield Right-of-Way</option>
+                            <option value="Following Too Closely">Following Too Closely</option>
+                            <option value="Unsafe Speed">Unsafe Speed</option>
+                            <option value="Traffic Control Disregarded">Traffic Control Disregarded</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="vehicleType">Vehicle Type:</label>
+                        <select id="vehicleType" required>
+                            <option value="Sedan" selected>Sedan</option>
+                            <option value="SUV">SUV</option>
+                            <option value="Truck">Truck</option>
+                            <option value="Bus">Bus</option>
+                            <option value="Motorcycle">Motorcycle</option>
+                            <option value="Bicycle">Bicycle</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="button-group">
+                        <button type="submit" class="primary-button">Update Record</button>
+                        <button type="reset" class="secondary-button">Reset Form</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <section class="crud-explanation">
+        <h3>How "Update" Works</h3>
+        <p>
+            The <strong>Update</strong> operation allows users to modify details of an existing collision record. 
+            Users select a record to edit, make changes in the form, and submit the update. 
+            In the final project, this will send the updated data to the backend API, which will save changes and refresh all related views and charts.
+        </p>
+    </section>
+
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 NYC Motor Vehicle Collisions Dashboard</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('updateForm').onsubmit = function(e) {
+            e.preventDefault();
+            alert('Record updated successfully! (Simulation)');
+            window.location.href = 'read.html';
+        };
+    </script>
+</body>
+</html>
