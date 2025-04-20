@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYC Motor Vehicle Collisions Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>NYC Motor Vehicle Collisions Dashboard</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="visualization.html">Data Visualization</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+			<h2>Welcome to NYC Motor Vehicle Collisions Dashboard</h2>
+			<p>This website provides insights into motor vehicle collisions across New York City. It leverages publicly available data to support the analysis of collision frequency, contributing factors, and their impact on public safetyS.</p>
+	
+			<h3>Project Purpose:</h3>
+			<p>The primary objective of this platform is to make crash data easy to understand. By providing visual insights, the dashboard helps people, city planners, and safety experts make better decisions and promote safer streets.</p>
+	
+			<h3>Key Features:</h3>
+			<ul class="bullets">
+				<li>Interactive data visualizations developed using using Chart.js</li>
+				<li>Insights into collisions categorized by borough, injury severity, and contributing causes</li>
+				<li>Buttons that simulate adding, viewing, updating, and deleting collision data</li>
+			</ul>
+		</section>
+
+        <section class="crud-navigation">
+            <h2>Manage Data</h2>
+            <p>Click a button to report a new collision, view existing records, make updates, or remove entries:</p>
+            <div class="crud-buttons">
+                <button onclick="location.href='create.html'">Report a Collision</button>
+                <button onclick="location.href='read.html'">View a Collision Record</button>
+                <button onclick="location.href='update.html'">Update a Collision Record</button>
+                <button onclick="location.href='delete.html'">Delete a Collision Record</button>
+            </div>
+        </section>
+
+        <section class="quick-stats">
+            <h2>Quick Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Collisions</h3>
+                    <p class="stat">1,234</p>
+                </div>
+                <div class="stat-card">
+                    <h3>People Injured</h3>
+                    <p class="stat">567</p>
+                </div>
+                <div class="stat-card">
+                    <h3>People Killed</h3>
+                    <p class="stat">42</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Latest Update</h3>
+                    <p class="stat">Apr 20, 2025</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 NYC Motor Vehicle Collisions Dashboard</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

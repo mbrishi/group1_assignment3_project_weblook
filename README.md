@@ -13,20 +13,24 @@ This project is a static website prototype built using HTML, CSS, and JavaScript
 ## Folder Structure
 ```
 group1_assignment3_project_weblook/
-│
-├── index.html
-├── visualization.html
+├── css/
+│   └── styles.css
+├── images/
+│   ├── Chi.jpg
+│   ├── Karthik.jpg
+│   ├── MotorVehicle_ERD.png
+│   ├── Rishi.jpg
+│   └── Safiya.jpg
+├── js/
+│   ├── charts.js
+│   └── script.js
 ├── about.html
 ├── create.html
+├── delete.html
+├── index.html
 ├── read.html
 ├── update.html
-├── delete.html
-│
-├── css/
-│   └── style.css
-│
-├── images/
-│   └── logical_data_model.png
+└── visualization.html
 ```
 
 ## Team Members
